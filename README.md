@@ -14,16 +14,10 @@ missing data patterns across grouped subsets.
 
 ## Installation
 
-Follow these steps to install the development version of `countmissing`
-from GitHub:
+You can install the development version of `countmissing` from
+[GitHub](https://github.com/) with:
 
-### 1. Install devtools package if you haven’t already
-
-`if (!requireNamespace("devtools", quietly = TRUE)) {   install.packages("devtools") }`
-
-### 2. Install countmissing from GitHub
-
-`devtools::install_github("andreawongkoo/countmissing", ref = "0.1.0")`
+`# install.packages("devtools") devtools::install_github("andreawongkoo/countmissing")`
 
 ## Example Usage
 

@@ -25,11 +25,10 @@ The goal of `countmissing` is to provide a simple and effective way to count mis
 
 You can install the development version of `countmissing` from [GitHub](https://github.com/) with:
       
-``` {r}
+`
 # install.packages("devtools")
 devtools::install_github("andreawongkoo/countmissing")
-
-```
+`
 
 
 ## Example Usage
