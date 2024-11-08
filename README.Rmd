@@ -1,0 +1,55 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+
+# countmissing
+
+<!-- badges: start --> <!-- badges: end -->
+The goal of `countmissing` is to provide a simple and effective way to count missing values in all columns of a data frame, grouped by a specified variable. The `count_all_missing_by_group()` function returns a summary table with one row per group level, helping users assess missing data patterns across grouped subsets.
+
+## Installation
+Follow these steps to install the development version of `countmissing` from GitHub:
+
+
+### 1. Install devtools package if you haven't already
+
+`if (!requireNamespace("devtools", quietly = TRUE)) {
+  install.packages("devtools")
+}`
+
+### 2. Install countmissing from GitHub
+`devtools::install_github("andreawongkoo/countmissing", ref = "0.1.0")`
+
+## Example
+
+**Example 1:** This is a basic example that demonstrates how to use `count_all_missing_by_group()` to count missing values by group in the built-in `mtcars` R dataset:
+
+``` {r}
+library(countmissing)
+
+# Example : Count missing values by the `am` column in mtcars
+count_all_missing_by_group(mtcars, am)
+
+```
+
+The `count_all_missing_by_group()` function makes it easy to summarize missing values across grouped data. 
+
+**Example 2:** For instance, you can use it to analyze missing data within specific categories, such as different months in the in-built `airquality` R dataset:
+
+``` {r}
+
+# Example: Count missing values by the `Month` column in airquality
+count_all_missing_by_group(airquality, Month)
+```

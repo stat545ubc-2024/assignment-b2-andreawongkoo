@@ -1,0 +1,22 @@
+Package: countmissing
+Title: Count missing values for all columns by group
+Version: 0.1.0
+Authors@R: 
+    person("Andrea", "Wong Koo", , "andreawongkoo@gmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0009-0009-3914-1533"))
+Description: This package provides count_all_missing_by_group(), 
+    a function to efficiently count missing values across all columns of a 
+    data frame, grouped by a specified variable. Built with `dplyr`, 
+    this function returns a summary table with one row per group level, 
+    making it easy to assess missing data within grouped subsets. 
+License: usethis::use_mit_license()
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Imports: 
+    dplyr
+Suggests: 
+    testthat (>= 3.0.0),
+    palmerpenguins,
+    roxygen2
+Config/testthat/edition: 3
