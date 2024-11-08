@@ -1,4 +1,4 @@
-Package: countmissing
+Package: countmissingtool
 Title: Count missing values for all columns by group
 Version: 0.1.1
 Authors@R: 
