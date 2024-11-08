@@ -31,7 +31,7 @@
 #' @examples
 #' count_all_missing_by_group(mtcars, am)
 #' count_all_missing_by_group(airquality, Month, .groups = "rowwise")
-#' iris |> count_all_missing_by_group(Species)
+#' iris |> count_all_missing_by_group(Species, .groups = "drop_last")
 #'
 #' @export
 count_all_missing_by_group <- function(data, group_col, .groups = "drop") {

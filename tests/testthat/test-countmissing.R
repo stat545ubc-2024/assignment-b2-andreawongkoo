@@ -1,4 +1,11 @@
-test_that("Output matches direct call to dplyr with modified inputs", {
+
+# Loaded packages for creating tests
+library(testthat)
+library(tibble)  
+library(countmissing)
+library(dplyr)
+
+test_that("Output matches direct call to dplyr", {
   modified_tbl <- tribble(~group, ~var1, ~var2,
                           "X", NA, 5,
                           "X", 3, NA,
