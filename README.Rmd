@@ -23,15 +23,14 @@ The goal of `countmissing` is to provide a simple and effective way to count mis
 
 ## Installation
 
-Follow these steps to install the development version of `countmissing` from GitHub:
+You can install the development version of `countmissing` from [GitHub](https://github.com/) with:
+      
+``` {r}
+# install.packages("devtools")
+devtools::install_github("andreawongkoo/countmissing")
 
-### 1. Install devtools package if you haven't already
+```
 
-`if (!requireNamespace("devtools", quietly = TRUE)) {   install.packages("devtools") }`
-
-### 2. Install countmissing from GitHub
-
-`devtools::install_github("andreawongkoo/countmissing", ref = "0.1.0")`
 
 ## Example Usage
 
