@@ -69,7 +69,7 @@ count_all_missing_by_group(airquality, Month)
 ```
 
 In this case, the function will summarize the missing values for each
-month, allowing you to understand potential patterns of missingness over
+month, allowing you to understand potential missing data patterns over
 time.
 
 ### Example 3: Handle Special Grouping Options

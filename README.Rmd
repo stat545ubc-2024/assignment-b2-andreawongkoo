@@ -55,7 +55,7 @@ You can also use the function to check missing data patterns in different subset
 count_all_missing_by_group(airquality, Month)
 ```
 
-In this case, the function will summarize the missing values for each month, allowing you to understand potential patterns of missingness over time.
+In this case, the function will summarize the missing values for each month, allowing you to understand potential missing data patterns over time.
 
 ### Example 3: Handle Special Grouping Options
 If you'd like to keep the grouping structure in the output, you can specify the `.groups` argument. For instance, setting .groups = "keep" retains the grouping structure after summarizing the missing values.
