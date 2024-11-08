@@ -6,7 +6,7 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of `countmissing-tool` is to provide a simple and effective way
+The goal of `countmissingtool` is to provide a simple and effective way
 to count missing values in all columns of a data frame, grouped by a
 specified variable. The `count_all_missing_by_group()` function returns
 a summary table with one row per group level, helping users assess
