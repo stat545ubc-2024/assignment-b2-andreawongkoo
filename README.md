@@ -8,8 +8,8 @@
 
 The goal of `countmissingtool` is to simplify the assessment of missing
 data across groups. The `count_all_missing_by_group()` function counts
-missing values by group across, and returns a summary table with one row
-per group for quick insights.
+missing values by group across all columns, and returns a summary table
+with one row per group for quick insights.
 
 ## Installation Instructions
 
