@@ -23,7 +23,7 @@ You can install the development version of `countmissing` from
 
 2.  Install `countmissing` from GitHub:
 
-`devtools::install_github("stat545ubc-2024/assignment-b2-andreawongkoo", ref = "main")`
+`devtools::install_github("stat545ubc-2024/assignment-b2-andreawongkoo", ref = "0.1.0")`
 
 ## Example Usage
 
