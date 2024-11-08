@@ -35,13 +35,13 @@
 #'
 #' @export
 count_all_missing_by_group <- function(data, group_col, .groups = "drop") {
-  
+
   if (!is.null(.groups)) {
     if (!(.groups %in% c("drop_last", "drop", "keep", "rowwise"))) {
       stop(".groups needs to be one of NULL, \"drop_last\", \"drop\", \"keep\", and \"rowwise\".")
     }
   }
-  
+
   data |>
     dplyr::group_by({{ group_col }}) |>
     dplyr::summarize(dplyr::across(dplyr::everything(), ~sum(is.na(.x))),

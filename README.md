@@ -14,27 +14,29 @@ missing data patterns across grouped subsets.
 
 ## Installation
 
-You can install the development version of countmissing from GitHub as
-follows:
+Follow these steps to install the development version of `countmissing`
+from GitHub:
 
-### Install devtools if you haven’t already
+### 1. Install devtools package if you haven’t already
 
 `if (!requireNamespace("devtools", quietly = TRUE)) {   install.packages("devtools") }`
 
-### Install countmissing from GitHub
+### 2. Install countmissing from GitHub
 
 `devtools::install_github("andreawongkoo/countmissing", ref = "0.1.0")`
 
-## Example
+## Example Usage
 
-This is a basic example that demonstrates how to use
-`count_all_missing_by_group()` to count missing values by group in the
-built-in `mtcars` R dataset:
+### Example 1: Count Missing Values in mtcars by Transmission Type
+
+This example demonstrates how to count the missing values for each
+column of the R built-in `mtcars` dataset, grouped by the `am` column,
+which represents the type of transmission (automatic vs. manual).
 
 ``` r
 library(countmissing)
 
-# Example: Count missing values by the `am` column in mtcars
+# Count missing values by the `am` column in the `mtcars` dataset
 count_all_missing_by_group(mtcars, am)
 #> # A tibble: 2 × 11
 #>      am   mpg   cyl  disp    hp  drat    wt  qsec    vs  gear  carb
@@ -43,12 +45,18 @@ count_all_missing_by_group(mtcars, am)
 #> 2     1     0     0     0     0     0     0     0     0     0     0
 ```
 
-The `count_all_missing_by_group()` function makes it easy to summarize
-missing values across grouped data. For instance, you can use it to
-analyze missing data within specific categories, such as different
-months in the in-built `airquality` R dataset:
+This will return a summary showing the count of missing values in each
+column for each transmission type (`am`), helping you quickly assess
+data quality across different groups.
+
+### Example 2: Analyze Missing Data by Month in the airquality Dataset
+
+You can also use the function to check missing data patterns in
+different subsets of a dataset. Here, we analyze the R built-in
+`airquality` dataset, grouping by the `Month` column.
 
 ``` r
+# Count missing values by the `Month` column in `airquality`
 count_all_missing_by_group(airquality, Month)
 #> # A tibble: 5 × 6
 #>   Month Ozone Solar.R  Wind  Temp   Day
@@ -60,29 +68,30 @@ count_all_missing_by_group(airquality, Month)
 #> 5     9     1       0     0     0     0
 ```
 
-What is special about using README.Rmd instead of just README.md? You
-can include R chunks like so:
+In this case, the function will summarize the missing values for each
+month, allowing you to understand potential patterns of missingness over
+time.
+
+### Example 3: Handle Special Grouping Options
+
+If you’d like to keep the grouping structure in the output, you can
+specify the `.groups` argument. For instance, setting .groups = “keep”
+retains the grouping structure after summarizing the missing values.
 
 ``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
+# Count missing values by `Month` and keep grouping structure
+count_all_missing_by_group(airquality, Month, .groups = "keep")
+#> # A tibble: 5 × 6
+#> # Groups:   Month [5]
+#>   Month Ozone Solar.R  Wind  Temp   Day
+#>   <int> <int>   <int> <int> <int> <int>
+#> 1     5     5       4     0     0     0
+#> 2     6    21       0     0     0     0
+#> 3     7     5       0     0     0     0
+#> 4     8     5       3     0     0     0
+#> 5     9     1       0     0     0     0
 ```
 
-You’ll need to render README.Rmd regularly to keep README.md up-to-date.
-The `devtools::build_readme()` function is handy for this.
-
-You can also embed plots, for example:
-
-``` r
-plot(pressure)
-```
-
-<img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" /> In
-that case, don’t forget to commit and push the resulting figure files so
-they display on GitHub and CRAN.
+This ensures that the result is still grouped by Month, which might be
+useful if you plan to perform additional operations on the summarized
+data.
