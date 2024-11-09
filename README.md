@@ -22,7 +22,7 @@ You can install the development version of `countmissingtool` from
 
 2.  Install `countmissingtool` from Github in the R console:
 
-`devtools::install_github("stat545ubc-2024/countmissingtool", ref = "1.0.2")`
+`devtools::install_github("stat545ubc-2024/countmissingtool", ref = "1.0.3")`
 
 ## Example Usage
 
